@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="with=device-width, intial-scale=1.0">
+	<title>
+		GVM
+	</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+</head>
+<body>
+	<section class="sub-header">
+		<nav>
+			<a href="index.html"><img src="gvm.jpg"></a>
+			<div class="nav-links"id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+
+				<ul>
+					<li><a href= "index.html">HOME </a></li>
+					<li><a href= "about.html">ABOUT US </a></li>
+					<li><a href="http://127.0.0.1:5000/">CHATBOT</a></li>
+					<li><a href="Course.html">COURSE</a></li>
+					<li><a href="Contact.html">CONTACT US</a></li> 
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+		</nav>
+		<h1> Contact Us</h1>
+	</section>
+	<section class="location">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.7220461105944!2d72.94797721490318!3d19.207338887012686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b974c919ef85%3A0xa6127a27c95162cd!2sGyanodaya%20Vidyamandir%20%2C%20Kanishat%20Mahavidyalaya!5e0!3m2!1sen!2sin!4v1680847391931!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		
+	</section>
+	<section class=" Contact-us">
+		<div class="row">
+			<div class="contact-col">
+				<div>
+					<i class="fa fa-home"></i>
+					<span><h5> Gyanodaya BSc It College</h5>
+						<p>Sawarkar Nagar Thane Maharashtra</p>
+					</span>
+				</div>
+				<div>
+					<i class="fa fa-phone"></i>
+					<span>
+						<h5> +91 7021722044</h5>
+						<p>Monday To saturday, 10Am to 6PM</p>
+					</span>
+				</div>
+				<div>
+					<i class="fa fa-envelope-o"></i>
+					<span><h5>prakashg7021@gmail.com</h5>
+						<p>Email Us Your Query</p>
+					</span>
+				</div>
+			</div>
+			<div class="contact-col">
+				<form action="form-handler.php" method="post">
+					<input type="text" name="name" placeholder="Enter your name" required>
+					<input type="Email" name="email" placeholder="Enter Email Address" required>
+					<input type="text" name="subject"  placeholder="Enter your Subject" required>
+					<textarea rows="8" name="message"  placeholder="Message" required></textarea>
+					<button type="Submit" class="hero-btn red-btn">Send Message</button>
+				</form>
+
+
+			</div>
+	</section>
+	<section class="footer">
+	<h4>About us</h4>
+	<p>Gyanodaya School, Junior & Senior College is an educational institution, <br>which strives to form men and women who will build a just and humane world.</p>
+	<div class="icons">
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-instagram"></i>
+		<i class="fa fa-linkedin"></i>
+		<i class="fa fa-skype"></i>
+</div>
+<p> Made with<i class="fa fa-heart-o"></i> by Prakash Gupta </p>
+</section>
+	
+
+</body>
+
+</html>

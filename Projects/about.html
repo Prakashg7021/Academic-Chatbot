@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="with=device-width, intial-scale=1.0">
+	<title>
+		GVM
+	</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+</head>
+<body>
+	<section class="sub-header">
+		<nav>
+			<a href="index.html"><img src="gvm.jpg"></a>
+			<div class="nav-links"id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT US </a></li>
+					<li><a href="http://127.0.0.1:5000/">CHATBOT</a></li>
+					<li><a href="Course.html">COURSE</a></li>
+					<li><a href="Contact.html">CONTACT US</a></li> 
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+		</nav>
+		<h1> About Us</h1>
+		
+	</section>
+	
+	<section class ="about-us">
+		<div class="row">
+			<div class="about-col">
+				<h1>Our Mission</h1>
+				<p>The mission of Gyanodaya Vidya Mandir is to seek exceptionally promising students from all backgrounds across the society and to educate them, through mental discipline and social experience, to develop their intellectual, moral, civic, and creative capacities to the fullest. The larger aim of this institute is to prepare and stimulate each new generation to perpetuate and advance human knowledge and to contribute to the health and development of the human community</p>
+				<a href="" class="hero-btn red-btn">EXPLORE NOW </a>
+
+			</div>
+			<div class="about-col">
+				<img src="about.jpg">
+			</div>
+		</div>
+	</section>
+<section class="footer">
+	<h4>About us</h4>
+	<p>Gyanodaya School, Junior & Senior College is an educational institution, <br>which strives to form men and women who will build a just and humane world.</p>
+	<div class="icons">
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-instagram"></i>
+		<i class="fa fa-linkedin"></i>
+		<i class="fa fa-skype"></i>
+</div>
+<p> Made with<i class="fa fa-heart-o"></i> by Prakash Gupta </p>
+</section>
+<script type="text/javascript">
+	var navLinks=document.getElementById("navLinks");
+	function showMenu(){
+		navLinks.style.right ="0";
+	}
+	function hideMenu(){
+		navLinks.style.right ="-200px";
+	}
+</script>
+</body>
+
+</html>

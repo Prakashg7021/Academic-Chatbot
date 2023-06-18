@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Academic Chatbot</title>
+    <style>
+        /* Basic CSS for the chatbot interface */
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-image: url("header-image.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .chat-window {
+            margin: 0 auto; /* center the chat window horizontally */
+            height: 400px;
+            border: 2px solid #ccc;
+            overflow-y: scroll;
+            padding: 10px;
+            background-image: url("background-image.jpg");
+            background-position: center;
+            background-size: cover;
+            max-width: 600px; /* limit the width of the chat window */
+        }
+
+        .user-message {
+            background-color: #c1ffc1;
+            display: block; /* change display property */
+            margin: 10px 0 5px 0; /* add bottom margin */
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .bot-message {
+            background-color: #eee;
+            display: block; /* change display property */
+            margin: 10px 0 5px 0; /* add bottom margin */
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .input-box {
+            width: calc(100% - 80px);
+            max-width: calc(600px - 80px);
+            margin: 10px 0;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .input-box::placeholder {
+            text-align: left;
+            opacity: 0.5;
+        }
+
+        .submit-button {
+            margin: 10px 0;
+        }
+
+        /* Added CSS for the logout button */
+        .logout-button {
+            margin: 10px;
+            padding: 5px;
+            border: none;
+            background-color: #d9534f;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .logout-button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Academic Chatbot</h1>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+    <div class="chat-window" id="chat-window"></div>
+    <form id="chat-form">
+        <center>
+            <input type="text" id="user-input" class="input-box" placeholder="Type your message here...">
+            <button type="submit" class="submit-button">Send</button>
+        </center>
+    </form>
+
+
+
+    <!-- JavaScript to handle chatbot interactions -->
+    <script>
+        const chatForm = document.getElementById('chat-form');
+        const chatWindow = document.getElementById('chat-window');
+        const userInput = document.getElementById('user-input');
+
+        chatForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            sendUserMessage();
+        });
+
+        function sendUserMessage() {
+            const message = userInput.value;
+            appendMessage('user', message);
+            fetch(`/get?msg=${message}`)
+                .then(response => response.text())
+                .then(botMessage => appendMessage('bot', botMessage));
+            userInput.value = '';
+        }
+
+
+
+        function appendMessage(sender, message) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add(`${sender}-message`);
+            messageElement.innerHTML = message;
+            chatWindow.appendChild(messageElement);
+        }
+    </script>
+</body>
+</html>
